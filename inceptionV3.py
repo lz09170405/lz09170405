@@ -16,7 +16,7 @@ def ConvBNReLUFactorization(in_channels,out_channels,kernel_sizes,paddings):
         nn.BatchNorm2d(out_channels),
         nn.ReLU6(inplace=True)
     )
-
+#用的时候两个Inplace=True要去掉
 class InceptionV3ModuleA(nn.Module):
     def __init__(self, in_channels,out_channels1,out_channels2reduce, out_channels2, out_channels3reduce, out_channels3, out_channels4):
         super(InceptionV3ModuleA, self).__init__()

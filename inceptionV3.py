@@ -1,4 +1,5 @@
-#torch
+#torch版
+#输入大小限制为299*299，通道一般是3。没有取小或大的原因是参数不会调。
 import torch
 import torch.nn as nn
 import torchvision
@@ -247,7 +248,7 @@ if __name__=='__main__':
     print(aux.shape)
     print(out.shape)
 
-#InceptionV3
+#InceptionV3，paddle版
 
 def ConvBNReLU(in_channels,out_channels,kernel_size,stride=1,padding=0):
     return nn.Sequential(
